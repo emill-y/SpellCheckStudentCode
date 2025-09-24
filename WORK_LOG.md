@@ -1,9 +1,9 @@
 Name: Eisha Yadav 
 
-| Date    | Time | Update |
-|:--------|:----:|-------:|
-| Sept 24 |      |        |
-|         |      |        |
+| Date    |       Time        |                                                                                                                                                                                                                                                                                                                                                                                                                                                      Update |
+|:--------|:-----------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Sept 24 | 11:15am - 12:00pm | Began by creating my problem set, and spent some time understanding runtime and how to best solve this problem set. When coding, I decided to first start with binary search, for proof of concept. The code works.. however, has a slow runtime (as we assessed in class) and hence times out during the longer tests. I am considering trying to do a log base 8 solution for future efficiency- splitting the problem into a TON of mini paths & trees.  |
+|         |                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
