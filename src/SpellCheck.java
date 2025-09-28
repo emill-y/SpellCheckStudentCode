@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 
 /**
  * Spell Check
@@ -21,18 +22,18 @@ public class SpellCheck {
      */
     public String[] checkWords(String[] text, String[] dictionary) {
         ArrayList<String> mispelled = new ArrayList<>();
-
+        LinkedHashSet<String> mispelledHash = new LinkedHashSet<>();
         for (String word : text) {
             if (binarySearch(word, dictionary) == false) {
-                if (!mispelled.contains(word)) {
-                    mispelled.add(word);
+                if (!mispelledHash.contains(word)) {
+                    mispelledHash.add(word);
                 }
             }
         }
 
-        String[] mispelledArr = new String[mispelled.size()];
-        mispelled.toArray(mispelledArr);
-
+        String[] mispelledArr = new String[mispelledHash.size()];
+        mispelledHash.toArray(mispelledArr);
+        
         return mispelledArr;
     }
     // Iterative Implementation of Binary Search (Not Recursive)
