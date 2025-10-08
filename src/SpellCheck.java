@@ -29,7 +29,7 @@ public class SpellCheck {
         // System.out.println("Would you like to use a Trie [type ('Trie')] or TST [type ('TST')]: \n ");
         // String algoChoice = scanner.nextLine();
         // Hardcoded Algorithm To be run ("TST" or "Trie")
-        String algoChoice = "TST";
+        String algoChoice = "Trie";
         // Run Trie Algorithm
         if (algoChoice.equalsIgnoreCase("Trie")) {
             Trie trie = new Trie();
