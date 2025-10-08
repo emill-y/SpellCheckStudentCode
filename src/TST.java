@@ -41,7 +41,9 @@ public class TST {
         if (node == null) {return null;}
         char c = word.charAt(index);
         // Three paths down
+        // Char is less
         if (c < node.c) {return get(node.left, word, index);}
+        // Char is greater
         else if (c > node.c) {return get(node.right, word, index);}
         else if (index < word.length() - 1) {return get(node.mid, word, index + 1);}
         else {return node;}

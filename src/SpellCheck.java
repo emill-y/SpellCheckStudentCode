@@ -22,11 +22,15 @@ public class SpellCheck {
      * @return String[] of all mispelled words in the order they appear in text. No duplicates.
      */
     public String[] checkWords(String[] text, String[] dictionary) {
-          LinkedHashSet<String> misspelledSet = new LinkedHashSet<>();
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Would you like to use a Trie [type ('Trie')] or TST [type ('TST')]: \n ");
-//        String algoChoice = scanner.nextLine();
+        // Initialize data structure to store misspelled words
+        LinkedHashSet<String> misspelledSet = new LinkedHashSet<>();
+
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("Would you like to use a Trie [type ('Trie')] or TST [type ('TST')]: \n ");
+        // String algoChoice = scanner.nextLine();
+        // Hardcoded Algorithm To be run ("TST" or "Trie")
         String algoChoice = "TST";
+        // Run Trie Algorithm
         if (algoChoice.equalsIgnoreCase("Trie")) {
             Trie trie = new Trie();
             for (String word : dictionary) {
@@ -38,6 +42,7 @@ public class SpellCheck {
                 }
             }
         } else if (algoChoice.equalsIgnoreCase("TST")) {
+            // Implement tst algorithm
             TST tst = new TST();
             for (String word : dictionary) {
                 tst.insert(word);
@@ -49,9 +54,11 @@ public class SpellCheck {
             }
         }
         else {
+            // Incorrect Input Error Checking
             System.out.println("Error: incorrect input. ");
         }
 
+        // Convert Hash-Set to Array to return
         String[] misspelledArray = new String[misspelledSet.size()];
         misspelledSet.toArray(misspelledArray);
         return misspelledArray;
